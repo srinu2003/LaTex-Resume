@@ -18,6 +18,13 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+% \usepackage{fourier} % or \usepackage{newtxtext}
+\usepackage{bold-extra}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
 
@@ -55,7 +62,10 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  %For bold small caps in Subheadings
+  \vspace{-4pt}\scshape\raggedright\large\bfseries 
+  % For normal small caps in Subheadings
+  % \vspace{-4pt}\scshape\raggedright\large 
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -69,10 +79,16 @@
   }
 }
 
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{#1} & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -87,12 +103,13 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -100,29 +117,40 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % \usepackage{bold-extra} % for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
 % \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
 
-\usepackage{fontawesome}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
 %----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+%   \textbf{\href{http://srinu2003.me/}{\Large Sourabh Bajaj}} & Email : \href{mailto:tsrin2003@gmail.com}{tsrin2003@gmail.com}\\
+%   \href{http://srinu2003.me/}{http://www.srinu2003.me} & Mobile : +1-123-456-7890 \\
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
-    \small \faPhone $ $ +91 918-272-1417 $|$ 
-    \faMapMarker $ $ Hyderabad, India $|$ 
-    \href{mailto:tsrin2003@gmail.com}{\faEnvelope $ $ tsrin2003@gmail.com} $|$ 
-    \href{https://linkedin.com/in/srinu2003/}{\faLinkedinSquare $ $ linkedin} $|$
-    \href{https://github.com/srinu2003}{\faGithub $ $ Github}
+    % {\Huge \scshape First Last} \\ \vspace{1pt}
+    % % \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
+    % Chinal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
+    % \small \faPhone $ $ +91 918-272-1417 $|$ 
+    % % \faMapMarker* $ $ Hyderabad, India $|$ 
+    % \href{mailto:tsrin2003@gmail.com}{\faEnvelope $ $ tsrin2003@gmail.com} $|$ 
+    % \href{https://linkedin.com/in/srinu2003/}{\faLinkedin $ $ linkedin} $|$
+    % \href{https://github.com/srinu2003}{\faGithub $ $ Github}
+
+    {\Huge \scshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
+    Chinal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}
+    \faPhone\ +91 918-272-1417 ~
+    \href{mailto:tsrin2003@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  {tsrin2003@gmail.com}} ~
+    \href{https://linkedin.com/in/srinu2003/}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/srinu2003}}  ~
+    \href{https://github.com/srinu2003}{\raisebox{-0.2\height}\faGithub\ {github.com/srinu2003}}
+    \vspace{-8pt}
 \end{center}
 
 
@@ -130,11 +158,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Marri Laxman Reddy Institute of Technology and Management}{Hyderabad, IND}
-      {B.Tech - Computer Science and Engineering, 9.04/10 CGPA}{Nov. 2021 -- Present}
+      {Marri Laxman Reddy Institute of Technology and Management}{Nov. 2021 -- Present}
+      {B.Tech - Computer Science and Engineering, 9.04/10 CGPA}{Hyderabad, IND}
     \resumeSubheading
-      {Sri Chaitanya Junior College}{Hyderabad, IND}
-      {Science with Maths, 94.8\% Higher Secondary, JEE (Main) 2021 - 81.70 percentile}{June 2019 -- Apr. 2021}
+      {Sri Chaitanya Junior College}{June 2019 -- Apr. 2021}
+      {Science with Maths, 94.8\% Higher Secondary, JEE (Main) 2021 - 81.70 percentile}{Hyderabad, IND}
       \resumeSubHeadingListEnd
 
 
@@ -143,8 +171,8 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+      {Competitive Programming Lead}{June 2020 -- Present}
+      {Google Developers Students Club}{MLRITM, Dundigal}
       \resumeItemListStart
         \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
@@ -152,13 +180,12 @@
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
+  %  \resumeSubSubheading
+  %   {Software Engineer I}{Oct 2014 - Sep 2016}
+  %   \resumeItemListStart
+  %      \resumeItem{Apache Beam}
+  %        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+  %   \resumeItemListEnd
 %-------------------------------------------
 
     \resumeSubheading
@@ -170,20 +197,20 @@
         \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
     \resumeItemListEnd
 
-    \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
-      \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
-      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+%-----------CODING PROFILES-----------
+\section{Coding Profiles}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \href{https://leetcode.com/srinu2003/}{\underline{\textbf{Leetcode}}}{:} @srinu2003 1,448 (Max Rating) \\
+      \href{https://www.codechef.com/users/srinu2003}{\underline{\textbf{CodeChef}}}{:} @srinu2003 1,474 (Div 3) \\
+      \href{https://codeforces.com/profile/srinu2003}{\underline{\textbf{Codeforces}}}{:} @srinu2003 858 (max. newbie, 858) \\
+      \href{https://www.hackerrank.com/tsrin2003}{\underline{\textbf{HackerRank}}}{:} @tsrin2003 C-Programming \\
+      }
+    }
+  \end{itemize}
 
 %-----------PROJECTS-----------
 \section{Projects}
