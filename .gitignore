@@ -10,5 +10,6 @@ out/
 *.synctex(busy)
 *.pdf
 !Srinivas-Rao-Tammireddy-resume.pdf
+!Srinivas-Rao-T-resume.pdf
 *.bbl
 *.out
