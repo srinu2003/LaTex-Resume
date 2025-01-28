@@ -1,6 +1,7 @@
 %-------------------------
 % Resume in Latex
 % Author : Srinivas Rao Tammireddy
+% LinkedIn: https://github.com/srinu2003/LaTex-Resume
 % Based off of: https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn
 % License : MIT
 %------------------------
@@ -24,6 +25,8 @@
 % \usepackage{fourier} % or \usepackage{newtxtext}
 \usepackage{bold-extra}
 
+\usepackage{graphicx}                       % For including graphics and images
+\usepackage[export]{adjustbox}              % For positioning images 
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -124,7 +127,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% \usepackage{bold-extra} % for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
+% \usepackage{bold-extra} for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
 % \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
 
 
@@ -134,36 +137,35 @@
 
 \begin{document}
 
-%----------HEADING----------
+% %----------HEADING----------
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://srinu2003.me/}{\Large Sourabh Bajaj}} & Email : \href{mailto:tsrin2003@gmail.com}{tsrin2003@gmail.com}\\
-%   \href{http://srinu2003.me/}{http://www.srinu2003.me} & Mobile : +1-123-456-7890 \\
+%   \textbf{\href{http://srinu2003.me/}{\Large Srinivas Rao T}} & Email : \href{mailto:tsrin2003@gmail.com}{tsrin2003@gmail.com}\\
+%   \href{http://srinu2003.me/}{http://www.srinu2003.me} & Mobile : +91 918-272-1417 \\
 % \end{tabular*}
 
-\begin{center}
-    % {\Huge \scshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
-    % \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
-    % Chinal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
-    % \small \faPhone $ $ +91 918-272-1417 $|$ 
-    % % \faMapMarker* $ $ Hyderabad, India $|$ 
-    % \href{mailto:tsrin2003@gmail.com}{\faEnvelope $ $ tsrin2003@gmail.com} $|$ 
-    % \href{https://linkedin.com/in/srinu2003/}{\faLinkedin $ $ linkedin} $|$
-    % \href{https://github.com/srinu2003}{\faGithub $ $ Github}
-
-    {\Huge \scshape Srinivas Rao Tammireddy} \\ \vspace{6pt}
-    Chintal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}
-    \faPhone\ +91 918-272-1417 ~
-    \href{mailto:tsrin2003@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  {tsrin2003@gmail.com}} ~
-    \href{https://linkedin.com/in/srinu2003/}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/srinu2003}}  ~
-    \href{https://github.com/srinu2003}{\raisebox{-0.2\height}\faGithub\ {github.com/srinu2003}}
-    \vspace{-8pt}
-    % \vspace{16pt}
-  \end{center}
 % \begin{center} To work on challenging assignments that shall yield the twin benefits of the job satisfaction and a steady-pace professional growth. \\ \vspace{2pt} \end{center}
+\begin{center}
+    \begin{minipage}{0.7\textwidth}
+        \raggedright
+        {\Huge \scshape Srinivas Rao Tammireddy} \\ \vspace{6pt}
+        Chintal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
+        \small
+        \begin{itemize}[leftmargin=0.15in, label={}]
+            \item \faPhone\ +91 918-272-1417 
+            \item \href{mailto:tsrin2003@gmail.com}{\faEnvelope\  {tsrin2003@gmail.com}}
+            \item \href{https://linkedin.com/in/srinu2003/}{\faLinkedin\ {linkedin.com/in/srinu2003}}
+            \item \href{https://github.com/srinu2003}{\faGithub\ {github.com/srinu2003}}
+            % \item \href{https://www.youtube.com/@srinu.2003}{\faYoutube\ {youtube.com/@srinu.2003}}
+        \end{itemize}
+    \end{minipage}%
+    \begin{minipage}{0.3\textwidth}
+        \includegraphics[width=3cm, center]{passport-size-photo.jpg}
+    \end{minipage}
+\end{center}
+
 
 %-----------OBJECTIVE-----------
-\section{Objective}
+\section{Objective} 
   \begin{itemize}[leftmargin=0.15in, label={}]
     \item \fontsize{10}{12} {\selectfont
     I am a \textbf{Computer Science Engineering} student at MLRITM, Hyderabad, passionate about \textbf{learning} new technologies and developing software applications. I strive to work on challenging assignments that offer job satisfaction and steady \textbf{professional growth}.}
@@ -204,49 +206,65 @@
         \end{multicols}
         \vspace*{2.0\multicolsep}
 
-
+% To be included in EXPERIENCE section if needed
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%-------------------------------------------
     
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\href{https://g.dev/tsrinu2003}{Programming Lead}}{June 2023 -- Present}
-      {Google Developers Students Club}{MLRITM, Dundigal}
-      \resumeItemListStart
-        % \resumeItem{Led the development of a junior programming curriculum focused on Dart, including Bit Manipulation and Stacks/Queues data structures. Authored engaging competitive programming questions to challenge and develop problem-solving skills in junior members.}
-        \resumeItem{Mentored juniors, improving their Technical relationship with Google Developer Tools.}
-        \resumeItem{Organized workshops and bootcamps, fostering a collaborative learning environment.}
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-  %  \resumeSubSubheading
-  %   {Software Engineer I}{Oct 2014 - Sep 2016}
-  %   \resumeItemListStart
-  %      \resumeItem{Apache Beam}
-  %        {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-  %   \resumeItemListEnd
-%-------------------------------------------
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {\href{https://g.dev/tsrinu2003}{Programming Lead}}{June 2023 -- Present}
+            {Google Developers Students Club}{MLRITM, Dundigal}
+            \resumeItemListStart
+                \resumeItem{Mentored juniors, improving their technical skills with Google Developer Tools.}
+                \resumeItem{Organized workshops and bootcamps, fostering a collaborative learning environment.}
+        \resumeItemListEnd
+        \resumeSubheading
+            {\href{http://kitsltd.co.uk/index.html}{Software Engineer Assistant Intern}}{June 2024 -- Present}
+            {Keertana Information Technology Solutions Limited}{KITS Ltd, UK}
+            \resumeItemListStart
+                \resumeItem{Developing and maintaining databases for company projects, ensuring optimal performance.}
+                \resumeItem{Collaborating with the development team to implement new features and functionalities.}
+                \resumeItem{Assisting in the development of web portals (Kits-HRMS, Kist-AP, Kits-IHP) with databasea and backend support.}
+                \resumeItem{Developing an Analatics Portal (Kits-ADAT) as part of company's product development.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-    \resumeSubheading
-    {\href{https://drive.google.com/file/d/1Hg6w58KnwbqaRiJdtpxpFh-dshw1vEoR/view?usp=sharing}{UI/UX Hackathon}}{Sep. 2021}
-    {MLRITM Department of C.S.E}{MLRITM, Dundigal}
-      \resumeItemListStart
-        \resumeItem{Designing adaptive UI/UX for cross-platform applications by Material-Design Design System.}
-    \resumeItemListEnd
+%-----------COMPETITIONS & HACKATHONS-----------
+\section{Competitions \& Hackathons}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {\href{https://drive.google.com/file/d/1M_5k71Pplh6leoRYhYY6SjMcuziMO_Cd/view?usp=sharing}{UI/UX Hackathon}}{Sep. 2021}
+            {MLRITM Department of C.S.E}{MLRITM, Dundigal}
+            \resumeItemListStart
+                \resumeItem{Designed adaptive UI/UX for cross-platform applications based on Material Design principles.}
+        \resumeItemListEnd
 
-    \resumeSubheading{Kavach 2023}{Apr. 2023}{Inovation \& Incubation Center}{MLRITM, Dundigal}
-      \resumeItemListStart
-          \resumeItem{Participated in a 24-hour hackathon to develop a solution for a real-world problem.}
-      \resumeItemListEnd
-    \resumeSubheading{\href{http://kitsltd.co.uk/index.html}{Intern at KITS Ltd}}{June.2024}{Keertana Information Technology Solutions Limited}{KITS Ltd, UK}
-      \resumeItemListStart
-          \resumeItem{Working as a Database Engineer Intern, developing and maintaining databases for the company Projects.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+        \resumeSubheading
+            {Kavach 2023}{Apr. 2023}
+            {Innovation \& Incubation Center}{MLRITM, Dundigal}
+            \resumeItemListStart
+                \resumeItem{Participated in a 24-hour hackathon to develop a real-world problem-solving solution.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\href{https://github.com/srinu2003/ibcm}{{\textbf{IBCM: Image-Based Construction Monitoring}} $|$ \emph{Python, Flask, React}}}{Present}
+      \resumeItemListStart \vspace{0pt}
+      \resumeItem{Developed a web application for monitoring construction progress using images.}
+      \resumeItem{Enabled users to upload construction site images, analyze them using image processing techniques, and generate insights on construction progress.}
+      \resumeItem{Provided features to compare progress with schedules and view detailed progress reports.}
+    \resumeItemListEnd
       \resumeProjectHeading
           {\href{https://github.com/srinu2003/Magpie}{{\textbf{Magpie}} $|$ \emph{Python, Tkinter}}}{Feb 12, 2024 -- May 15, 2024}
           \resumeItemListStart \vspace{0pt}
@@ -261,15 +279,16 @@
         \resumeItemListEnd
     \resumeSubHeadingListEnd
 
-
+% In next page
+\newpage
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Technical Languages}{: Java(Core), Python, Dart, C Language, C\#, *SQL, HTML \& *CSS} \\
-     \textbf{Developer Tools}{: *Linux,, Git, Github, Project IDX, Visual Studio Code, PyCharm, Star UML, Jupyter Notebook, *MS Excel, MS Word, MySQL.} \\
-     \textbf{Technologies/Frameworks}{: Flutter, Material-3 Design, \LaTeX, *App Script, *Blockchain} \\
+     \textbf{Technical Languages}{: Java(Core), Python, Dart, C Language, *C\#, *SQL, HTML \& *CSS} \\
+     \textbf{Developer Tools}{: MySQL Workbench, Jira, Git, Github, Visual Studio Code, *Linux, JetBrains PyCharm, Star UML, Jupyter Notebook, *MS Excel, MS Word, MySQL.} \\
+     \textbf{Technologies/Frameworks}{: Flutter, Material-3 Design, \LaTeX, Streamlit, *Flask, *Google Apps Script, *Blockchain, *Machine Learning} \\
     }}
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textit{} & \textit{\small *Elimentary proficiency} \\
@@ -305,10 +324,22 @@
                         {\textbf{Python: The Professional Guide For Beginners (2024 Edition)} by \href{https://www.linkedin.com/in/federicoazzu/}{Federico Azzurro} \faExternalLink*} (May. 2024)}
       \resumeItem{\href{https://www.hackerrank.com/certificates/607a2d4d88f1}
                         {\textbf{Python (Basic) certification} by HackerRank \faExternalLink*} (May. 2024)}
-      
     \resumeItemListEnd
 
-  
+%-----------CONTRIBUTIONS-----------
+\section{Contributions}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lab Manual Preparation}{Jul 12, 2024, -- Present}
+      {Skill Development Course (UI Design with Flutter)}{MLRITM, Dundigal}
+      \resumeItemListStart
+        \resumeItem{Authored and designed a comprehensive lab manual covering topics like Flutter and Dart SDK installation, widgets, responsive UIs, state management, animations, REST API integrations, and unit testing.}
+        \resumeItem{Ensured alignment with academic outcomes and provided additional resources for self-paced learning.}
+        \resumeItem{Integrated official references from \href{https://flutter.dev}{Flutter Documentation}, \href{https://material.io}{Material Design Guidelines}, and third-party tools.}
+          \resumeItem{\href{https://github.com/srinu2003/Flutter-Lab}{GitHub Repository: Flutter-Lab}}
+              \resumeItemListEnd
+          \resumeSubHeadingListEnd
+
 %-----------INVOLVEMENT---------------
 \vspace{-11pt}
 \section{Honors and Awards}
