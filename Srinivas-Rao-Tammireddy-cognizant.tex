@@ -71,9 +71,9 @@
 % Sections formatting
 \titleformat{\section}{
   %For bold small caps in Subheadings
-  % \vspace{-4pt}\scshape\raggedright\large\bfseries 
+  % \vspace{-4pt}\scshape\raggedright\large\bfseries
   % For normal small caps in Subheadings
-  \vspace{-6pt}\scshape\raggedright\large 
+  \vspace{-6pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -81,38 +81,30 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\classesList}[4]{\item\small{{#1 #2 #3 #4 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \vspace{-2pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -148,7 +140,7 @@
         Chintal, Hyderabad, Telangana 500054 \\ \vspace{1pt}
         \small
         \begin{itemize}[leftmargin=0.15in, label={}]
-            \item \faPhone\ +91 918-272-1417 
+            \item \faPhone\ +91 918-272-1417
             \item \href{mailto:tsrin2003@gmail.com}{\faEnvelope\  {tsrin2003@gmail.com}}
             \item \href{https://linkedin.com/in/srinu2003/}{\faLinkedin\ {linkedin.com/in/srinu2003}}
             \item \href{https://github.com/srinu2003}{\faGithub\ {github.com/srinu2003}}
@@ -162,7 +154,7 @@
 
 
 %-----------OBJECTIVE-----------
-\section{Objective} 
+\section{Objective}
   \begin{itemize}[leftmargin=0.15in, label={}]
     \item \fontsize{10}{12} {\selectfont
     I am a \textbf{Computer Science Engineering} student at MLRITM, Hyderabad, passionate about \textbf{learning} new technologies and developing software applications. I strive to work on challenging assignments that offer job satisfaction and steady \textbf{professional growth}.}
@@ -212,7 +204,7 @@
 %          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
 %     \resumeItemListEnd
 %-------------------------------------------
-    
+
 %-----------EXPERIENCE-----------
 \section{Experience}
     \resumeSubHeadingListStart
