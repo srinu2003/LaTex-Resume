@@ -81,17 +81,8 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\classesList}[4]{\item\small{{#1 #2 #3 #4 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
@@ -102,14 +93,14 @@
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
@@ -136,33 +127,27 @@
 % Comment if Uneaded
 %----------HEADING----------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-\textbf{\href{http://yourwebsite.com/}{\Large Your Name (Comment if Unneeded)}} & Email : \href{mailto:youremail@gmail.com}{youremail@gmail.com}\\
+  \textbf{\href{http://yourwebsite.com/}{\Large Your Name (Comment if Unneeded)}} & Email : \href{mailto:youremail@gmail.com}{youremail@gmail.com}\\
   \href{http://yourwebsite.com/}{http://www.yourwebsite.com} & Mobile : +91 123-456-7890 \\
 \end{tabular*}
 
 \begin{center}
-    \begin{minipage}{0.7\textwidth}
-        \raggedright
-        {\Huge \scshape Your Name with Designation} \\ \vspace{6pt}
-        Your Address \\ \vspace{1pt}
-        \small
-        \begin{itemize}[leftmargin=0.15in, label={}]
-            \item \faPhone\ +91 123-456-7890 
-            \item \href{mailto:youremail@gmail.com}{\faEnvelope\  {youremail@gmail.com}}
-            \item \href{https://linkedin.com/in/yourprofile/}{\faLinkedin\ {linkedin.com/in/yourprofile}}
-            \item \href{https://github.com/yourprofile}{\faGithub\ {github.com/yourprofile}}
-            % \item \href{https://www.youtube.com/@yourprofile}{\faYoutube\ {youtube.com/@yourprofile}}
-            % \item \href{https://twitter.com/yourprofile}{\faTwitter\ {twitter.com/yourprofile}}
-            % \item \href{https://www.facebook.com/yourprofile}{\faFacebook\ {facebook.com/yourprofile}}
-            % \item \href{https://www.instagram.com/yourprofile}{\faInstagram\ {instagram.com/yourprofile}}
-            % \item \href{https://www.behance.net/yourprofile}{\faBehance\ {behance.net/yourprofile}}
-            % \item \href{https://www.pinterest.com/yourprofile}{\faPinterest\ {pinterest.com/yourprofile}}
-            \item \href{https://yourwebsite.com}{\faGlobe\ {yourwebsite.com}}
-        \end{itemize}
-    \end{minipage}%
-    \begin{minipage}{0.3\textwidth}
-        \includegraphics[width=3.5cm, center]{image.jpeg}
-    \end{minipage}
+  \begin{minipage}{0.7\textwidth}
+    \raggedright
+    {\Huge \scshape Your Name with Designation} \\ \vspace{6pt}
+    Your Address \\ \vspace{1pt}
+    \small
+    \begin{itemize}[leftmargin=0.15in, label={}]
+      \item \faPhone\ +91 123-456-7890 
+      \item \href{mailto:youremail@gmail.com}{\faEnvelope\  {youremail@gmail.com}}
+      \item \href{https://linkedin.com/in/yourprofile/}{\faLinkedin\ {linkedin.com/in/yourprofile}}
+      \item \href{https://github.com/yourprofile}{\faGithub\ {github.com/yourprofile}}
+      \item \href{https://yourwebsite.com}{\faGlobe\ {yourwebsite.com}}
+    \end{itemize}
+  \end{minipage}%
+  \begin{minipage}{0.3\textwidth}
+    \includegraphics[width=3.5cm, center]{image.jpeg}
+  \end{minipage}
 \end{center}
 
 %-----------OBJECTIVE-----------
@@ -186,23 +171,23 @@
 
 %------RELEVANT COURSEWORK-------
 \section{Relevant Coursework}
-        \begin{multicols}{4}
-            \begin{itemize}[itemsep=-3pt, parsep=3pt]
-              \small
-                \item Course 1
-                \item Course 2
-                \item Course 3
-                \item Course 4
-                % \item Course 5
-                \item Course 6
-                \item Course 7
-                % \item Course 8
-                % \item Course 9
-                \item Course 10
-                \item Course 11
-              \end{itemize}
-        \end{multicols}
-        \vspace*{2.0\multicolsep}
+  \begin{multicols}{4}
+    \begin{itemize}[itemsep=-3pt, parsep=3pt]
+      \small
+        \item Course 1
+        \item Course 2
+        \item Course 3
+        \item Course 4
+        % \item Course 5
+        \item Course 6
+        \item Course 7
+        % \item Course 8
+        % \item Course 9
+        \item Course 10
+        \item Course 11
+    \end{itemize}
+  \end{multicols}
+  \vspace*{2.0\multicolsep}
 
 % To be included in EXPERIENCE section if needed
 % -----------Multiple Positions Heading-----------
@@ -216,73 +201,73 @@
     
 %-----------EXPERIENCE-----------
 \section{Experience}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-            {\href{https://yourcompany.com}{Your Job Title}}{Start Date -- End Date}
-            {Your Company}{Your Location}
-            \resumeItemListStart
-                \resumeItem{Description of your responsibilities and achievements.}
-                \resumeItem{Description of your responsibilities and achievements.}
-        \resumeItemListEnd
-        \resumeSubheading
-            {\href{https://yourcompany.com}{Your Job Title}}{Start Date -- End Date}
-            {Your Company}{Your Location}
-            \resumeItemListStart
-                \resumeItem{Description of your responsibilities and achievements.}
-                \resumeItem{Description of your responsibilities and achievements.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://yourcompany.com}{Your Job Title}}{Start Date -- End Date}
+      {Your Company}{Your Location}
+      \resumeItemListStart
+        \resumeItem{Description of your responsibilities and achievements.}
+        \resumeItem{Description of your responsibilities and achievements.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {\href{https://yourcompany.com}{Your Job Title}}{Start Date -- End Date}
+      {Your Company}{Your Location}
+      \resumeItemListStart
+        \resumeItem{Description of your responsibilities and achievements.}
+        \resumeItem{Description of your responsibilities and achievements.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------COMPETITIONS & HACKATHONS-----------
 \section{Competitions \& Hackathons}
-    \resumeSubHeadingListStart
-        \resumeSubheading
-            {\href{https://yourcompetition.com}{Your Competition}}{Date}
-            {Organizing Body}{Your Location}
-            \resumeItemListStart
-                \resumeItem{Description of your participation and achievements.}
-        \resumeItemListEnd
-        \resumeSubheading
-            {Your Hackathon}{Date}
-            {Organizing Body}{Your Location}
-            \resumeItemListStart
-                \resumeItem{Description of your participation and achievements.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://yourcompetition.com}{Your Competition}}{Date}
+      {Organizing Body}{Your Location}
+      \resumeItemListStart
+        \resumeItem{Description of your participation and achievements.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Your Hackathon}{Date}
+      {Organizing Body}{Your Location}
+      \resumeItemListStart
+        \resumeItem{Description of your participation and achievements.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
+  \resumeSubHeadingListStart
     \resumeProjectHeading
       {\href{https://github.com/yourprofile/yourproject}{{\textbf{Your Project}} $|$ \emph{Technologies Used}}}{Date}
       \resumeItemListStart \vspace{0pt}
-      \resumeItem{Description of your project and your role in it.}
-      \resumeItem{Description of your project and your role in it.}
-    \resumeItemListEnd
-      \resumeProjectHeading
-          {\href{https://github.com/yourprofile/yourproject}{{\textbf{Your Project}} $|$ \emph{Technologies Used}}}{Date}
-          \resumeItemListStart \vspace{0pt}
-          \resumeItem{Description of your project and your role in it.}
-          \resumeItem{Description of your project and your role in it.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+        \resumeItem{Description of your project and your role in it.}
+        \resumeItem{Description of your project and your role in it.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\href{https://github.com/yourprofile/yourproject}{{\textbf{Your Project}} $|$ \emph{Technologies Used}}}{Date}
+      \resumeItemListStart \vspace{0pt}
+        \resumeItem{Description of your project and your role in it.}
+        \resumeItem{Description of your project and your role in it.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 % In next page
 \newpage
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Technical Languages}{: Language 1, Language 2, Language 3, *Language 4, *Language 5} \\
-     \textbf{Developer Tools}{: Tool 1, Tool 2, Tool 3, *Tool 4, *Tool 5} \\
-     \textbf{Technologies/Frameworks}{: Framework 1, Framework 2, \LaTeX, Framework 3, *Framework 4, *Framework 5} \\
+      \textbf{Technical Languages}{: Language 1, Language 2, Language 3, *Language 4, *Language 5} \\
+      \textbf{Developer Tools}{: Tool 1, Tool 2, Tool 3, *Tool 4, *Tool 5} \\
+      \textbf{Technologies/Frameworks}{: Framework 1, Framework 2, \LaTeX, Framework 3, *Framework 4, *Framework 5} \\
     }}
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textit{} & \textit{\small *Elementary proficiency} \\
-  \end{tabular*}
-  \vspace{-7pt}
- \end{itemize}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textit{} & \textit{\small *Elementary proficiency} \\
+    \end{tabular*}
+    \vspace{-7pt}
+  \end{itemize}
 
 %-----------CODING PROFILES-----------
 \vspace{-12pt}
@@ -295,20 +280,19 @@
       \href{https://www.interviewbit.com/profile/yourprofile/}{\underline{\textbf{InterviewBit}}{:} @yourprofile} Your Rank \\
       \href{https://www.codechef.com/users/yourprofile}{\underline{\textbf{CodeChef}}{:} @yourprofile} Your Rating \\
       \href{https://codeforces.com/profile/yourprofile}{\underline{\textbf{Codeforces}}{:} @yourprofile} Your Rating \\
-      }
-    }
+    }}
   \end{itemize}
 \end{multicols}
 
 %-----------CERTIFICATIONS/COURSES-----------
 \vspace{-3pt}
-  \section{Certifications/Courses}
-    \resumeItemListStart[parsep = 0pt]
-      \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
-      \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
-      \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
-      \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
-    \resumeItemListEnd
+\section{Certifications/Courses}
+  \resumeItemListStart[parsep = 0pt]
+    \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
+    \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
+    \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
+    \resumeItem{\href{https://yourcertification.com}{\textbf{Your Certification} by Certifying Body \faExternalLink*} (Date)}
+  \resumeItemListEnd
 
 %-----------CONTRIBUTIONS-----------
 \section{Contributions}
@@ -320,9 +304,9 @@
         \resumeItem{Description of your contribution.}
         \resumeItem{Description of your contribution.}
         \resumeItem{Description of your contribution.}
-          \resumeItem{\href{https://github.com/yourprofile/yourcontribution}{GitHub Repository Link: Your Contribution}}
-              \resumeItemListEnd
-          \resumeSubHeadingListEnd
+        \resumeItem{\href{https://github.com/yourprofile/yourcontribution}{GitHub Repository Link: Your Contribution}}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 %-----------HONORS AND AWARDS-----------
 \vspace{-11pt}

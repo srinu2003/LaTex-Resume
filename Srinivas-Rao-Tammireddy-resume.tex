@@ -1,7 +1,7 @@
 %-------------------------
 % Resume in Latex
 % Author : Srinivas Rao Tammireddy
-% Template link: https://github.com/srinu2003/LaTex-Resume
+% LinkedIn: https://github.com/srinu2003/LaTex-Resume
 % Based off of: https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn
 % License : MIT
 %------------------------
@@ -25,10 +25,11 @@
 % \usepackage{fourier} % or \usepackage{newtxtext}
 \usepackage{bold-extra}
 
+\usepackage{graphicx}                       % For including graphics and images
+\usepackage[export]{adjustbox}              % For positioning images 
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
-
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -40,7 +41,6 @@
 % serif
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -81,17 +81,8 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\classesList}[4]{\item\small{{#1 #2 #3 #4 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
@@ -102,14 +93,14 @@
 }
 
 \newcommand{\resumeSubSubheading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2} \\
     \end{tabular*}\vspace{-7pt}
@@ -125,9 +116,8 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-% \usepackage{bold-extra} % for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
-% \textbf{\Huge \normalshape Srinivas Rao Tammireddy} \\ \vspace{1pt}
-
+% \usepackage{bold-extra} for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
+% \textbf{\Huge \normalshape Your Name} \\ \vspace{1pt}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
