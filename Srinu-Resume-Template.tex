@@ -1,0 +1,275 @@
+%-------------------------
+% Resume in Latex
+% Author : Srinivas Rao Tammireddy
+% LinkedIn: https://github.com/srinu2003/LaTex-Resume
+% Based off of: https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn
+% License : MIT
+%------------------------
+
+% \documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+% \usepackage{fourier} % or \usepackage{newtxtext}
+\usepackage{bold-extra}
+
+\usepackage{graphicx}                       % For including graphics and images
+\usepackage[export]{adjustbox}              % For positioning images 
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\footskip}{4.08003pt}
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    %For bold small caps in Subheadings
+    % \vspace{-4pt}\scshape\raggedright\large\bfseries 
+    % For normal small caps in Subheadings
+    \vspace{-6pt}\scshape\raggedright\large 
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\classesList}[4]{\item\small{{#1 #2 #3 #4 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & \textbf{\small #2} \\
+            \textit{\small#3} & \textit{\small #4} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \textit{\small#1} & \textit{\small #2} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+        \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+            \small#1 & \textbf{\small #2} \\
+        \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% \usepackage{bold-extra} for bold small caps in section titles and subheadings. Instead of \normalshape, use \scshape in:
+% \textbf{\Huge \normalshape Your Name} \\ \vspace{1pt}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\href{http://yourwebsite.com/}{\Large Your Name}} & Email : \href{mailto:your.email@example.com}{your.email@example.com}\\
+    \href{http://yourwebsite.com/}{http://www.yourwebsite.com} & Mobile : +1-123-456-7890 \\
+\end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Your Name} \\ \vspace{6pt}
+    Your Address \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}
+    \faPhone\ Your Phone Number ~
+    \href{mailto:your.email@example.com}{\raisebox{-0.2\height}\faEnvelope\  {your.email@example.com}} ~
+    \href{https://linkedin.com/in/yourprofile}{\raisebox{-0.2\height}\faLinkedin\ {linkedin.com/in/yourprofile}}  ~
+    \href{https://github.com/yourusername}{\raisebox{-0.2\height}\faGithub\ {github.com/yourusername}}
+    \vspace{-8pt}
+\end{center}
+% \begin{center} To work on challenging assignments that shall yield the twin benefits of the job satisfaction and a steady-pace professional growth. \\ \vspace{2pt} \end{center}
+
+%-----------OBJECTIVE-----------
+\section{Objective}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \item \fontsize{10}{12} {\selectfont
+        Your objective statement goes here.}
+    \end{itemize}
+
+%-----------EDUCATION-----------
+\vspace{-15pt}
+\section{Education}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {Your University}{Start Date -- End Date}
+            {Your Degree, GPA}{Location}
+        \resumeSubheading
+            {Your High School}{Start Date -- End Date}
+            {Your Qualification, Percentage}{Location}
+        \resumeSubheading
+            {Your Intermediate, Jee Mains}{Start Date -- End Date}
+            {Your Qualification, Percentage}{Location}
+    \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    \begin{multicols}{4}
+        \begin{itemize}[itemsep=-3pt, parsep=3pt]
+            \small
+                \item Course 1
+                \item Course 2
+                \item Course 3
+                \item Course 4
+                \item Course 5
+                \item Course 6
+                \item Course 7
+                \item Course 8
+            \end{itemize}
+    \end{multicols}
+    \vspace*{2.0\multicolsep}
+
+% -----------Multiple Positions Heading-----------
+\resumeSubHeadingListStart
+     \resumeSubSubheading
+    {Software Engineer I}{Oct 2014 - Sep 2016}
+    \resumeItemListStart
+         \resumeItem{Apache Beam}
+            {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+%-------------------------------------------
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {Your Job Title}{Start Date -- End Date}
+            {Your Company}{Location}
+            \resumeItemListStart
+                \resumeItem{Your responsibility or achievement 1.}
+                \resumeItem{Your responsibility or achievement 2.}
+            \resumeItemListEnd
+
+        \resumeSubheading
+            {Your Job Title}{Start Date -- End Date}
+            {Your Company}{Location}
+            \resumeItemListStart
+                \resumeItem{Your responsibility or achievement 1.}
+                \resumeItem{Your responsibility or achievement 2.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\href{https://github.com/yourusername/yourproject}{{\textbf{Project Name}} $|$ \emph{Technology}}}{Start Date -- End Date}
+            \resumeItemListStart \vspace{0pt}
+            \resumeItem{Description of the project and your role.}
+            \resumeItem{Technologies used and key features.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: List of languages} \\
+        \textbf{Developer Tools}{: List of tools} \\
+        \textbf{Technologies/Frameworks}{: List of technologies and frameworks} \\
+        \textbf{Any other you want to mention}{: List of any other relevant skills} \\
+     }}
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textit{} & \textit{\small *Elementary proficiency} \\
+    \end{tabular*}
+    \vspace{-7pt}
+ \end{itemize}
+
+%-----------CODING PROFILES-----------
+\vspace{-12pt}
+\section{Coding Profiles}
+\begin{multicols}{2}
+    \begin{itemize}[leftmargin=0.15in, label={}]
+        \small{\item{
+            \href{https://leetcode.com/yourprofile}{\underline{\textbf{Leetcode}}{:} @yourprofile} \\ 
+            \href{https://www.hackerrank.com/yourprofile}{\underline{\textbf{HackerRank}}{:} @yourprofile} \\ 
+            \href{https://www.interviewbit.com/profile/yourprofile}{\underline{\textbf{InterviewBit}}{:} @yourprofile} \\ 
+            \href{https://www.codechef.com/users/yourprofile}{\underline{\textbf{CodeChef}}{:} @yourprofile} \\ 
+            \href{https://codeforces.com/profile/yourprofile}{\underline{\textbf{Codeforces}}{:} @yourprofile} \\ 
+            }
+        }
+    \end{itemize}
+\end{multicols}
+
+%-----------CERTIFICATIONS/COURSES-----------
+\vspace{-3pt}
+    \section{Certifications/Courses}
+        \resumeItemListStart[parsep = 0pt]
+            \resumeItem{\href{https://linktocertification}{\textbf{Certification Name} by Issuer \faExternalLink*} (Date)}
+            \resumeItem{\href{https://linktocertification}{\textbf{Certification Name} by Issuer \faExternalLink*} (Date)}
+        \resumeItemListEnd
+
+%-----------HONORS AND AWARDS-----------
+\vspace{-11pt}
+\section{Honors and Awards}
+    \resumeItemListStart[parsep = -2pt]
+        \resumeItem{\textbf{Award 1} description}
+        \resumeItem{\textbf{Award 2} description}
+    \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
