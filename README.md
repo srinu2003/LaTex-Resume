@@ -10,8 +10,12 @@ Welcome to the **LaTeX Resume Repository**! This repository contains my personal
   - [Srinivas Rao Tammireddy Resume (With Photo)](https://srinu2003.github.io/LaTex-Resume/Srinivas-Rao-Tammireddy-Photo-resume.pdf)
 
 ### 2. **LaTeX Resume Templates**
-- **[Resume-Template.tex](#file:Resume-Template.tex):** A clean and professional LaTeX resume template.
-- **[Resume-Template-Photo.tex](#file:Resume-Template-Photo.tex):** A LaTeX resume template with support for including a profile photo.
+- **Resume Template (Standard)**:
+  - [TeX Source](Resume-Template.tex): A clean and professional LaTeX resume template.
+  - [PDF Preview](https://srinu2003.github.io/LaTex-Resume/Resume-Template.pdf)
+- **Resume Template (With Photo)**:
+  - [TeX Source](Resume-Template-Photo.tex): A LaTeX resume template with support for including a profile photo.
+  - [PDF Preview](https://srinu2003.github.io/LaTex-Resume/Resume-Template-Photo.pdf)
 
 These templates are designed to be easy to use and customizable, allowing you to create resumes that stand out.
 
