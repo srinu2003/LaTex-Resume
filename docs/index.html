@@ -5,142 +5,261 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaTeX Resume Repository</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> -->
 
-        header {
-            background: linear-gradient(135deg, #007acc 20%, #005f99 100%);
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        main {
-            padding: 1rem 2rem;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 1rem;
-        }
-
-        h2 {
-            color: #007acc;
-        }
-
-        a {
-            color: #007acc;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            transition: color 0.3s ease;
-            color: #004d80;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-    </style>
+    <!-- Add Prism CSS for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet" />
+    <link id="theme-style" rel="stylesheet" href="styles-light.css">
 </head>
 
 <body>
-    <header>
-        <h1>LaTeX Resume Repository</h1>
-        <p>Create standout resumes with customizable LaTeX templates.</p>
-    </header>
-    <main>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li><strong>My Resume:</strong> Available in two formats:
-                    <ul>
-                        <li><a href="https://srinu2003.github.io/LaTex-Resume/Srinivas-Rao-Tammireddy-resume.pdf"
-                                target="_blank">Standard Resume</a></li>
-                        <li><a href="https://srinu2003.github.io/LaTex-Resume/Srinivas-Rao-Tammireddy-Photo-resume.pdf"
-                                target="_blank">Photo Resume</a></li>
-                    </ul>
-                </li>
-                <li><strong>LaTeX Resume Templates:</strong>
-                    <ul>
-                        <li>Resume Template (Standard):
-                            <ul>
-                                <li><a href="Resume-Template.tex">TeX Source</a>: A clean and professional LaTeX resume
-                                    template.</li>
-                                <li><a href="https://srinu2003.github.io/LaTex-Resume/Resume-Template.pdf"
-                                        target="_blank">PDF Preview</a></li>
-                            </ul>
+    <!-- Theme toggle button -->
+    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle theme">
+        <span id="theme-toggle-icon" class="theme-toggle-icon">
+            <!-- Sun icon SVG (default) -->
+            <svg id="sun-icon" viewBox="0 0 24 24" fill="none" stroke="#007acc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <g>
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </g>
+            </svg>
+            <svg id="moon-icon" viewBox="0 0 24 24" fill="#7ecbff" stroke="#7ecbff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 a7 7 0 0 0 9.79 9.79z"/>
+            </svg>
+        </span>
+    </button>
+    <section id="hero">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/92/LaTeX_logo.svg" alt="LaTeX Logo"
+                    class="logo">
+            </div>
+            <h1>LaTeX Resume Repository</h1>
+            <p>Make your resume stand out with our modern, professional templates.</p>
+            <div class="btn-row">
+                <a class="btn" href="https://srinu2003.github.io/LaTex-Resume/Srinivas-Rao-Tammireddy-resume.pdf"
+                    target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="PDF" class="btn-icon">My Standard
+                    Resume
+                </a>
+                <a class="btn" href="https://srinu2003.github.io/LaTex-Resume/Srinivas-Rao-Tammireddy-Photo-resume.pdf"
+                    target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="PDF" class="btn-icon">My Photo Resume
+                </a>
+                <a class="btn" href="https://github.com/srinu2003/LaTex-Resume" target="_blank">
+                    <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png" alt="GitHub"
+                        class="btn-icon">GitHub Repository
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="templates">
+        <div class="container">
+            <h2 class="section-title">LaTeX Resume Templates</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>📄 Standard Template</h3>
+                    <p>A clean and professional look.</p>
+                    <p>
+                        <a href="Resume-Template.tex">TeX Source</a> |
+                        <a href="https://srinu2003.github.io/LaTex-Resume/Resume-Template.pdf" target="_blank">
+                            <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="PDF" class="pdf-icon">PDF
+                        </a>
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>🧑‍💼 Photo Template</h3>
+                    <p>Stand out with a profile photo.</p>
+                    <p>
+                        <a href="Resume-Template-Photo.tex">TeX Source</a> |
+                        <a href="https://srinu2003.github.io/LaTex-Resume/Resume-Template-Photo.pdf" target="_blank">
+                            <img src="https://img.icons8.com/color/48/000000/pdf.png" alt="PDF" class="pdf-icon">PDF
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Features</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Resume Features</h3>
+                    <p>
+                        <strong><span>&#10003;</span> Easy Customization:</strong> Simple LaTeX source files let you
+                        tailor every
+                        detail.<br>
+                        <strong><span>&#10003;</span> Professional Style:</strong> Well-structured layouts for a
+                        standout resume.<br>
+                        <strong><span>&#10003;</span> Responsive Design:</strong> Looks great on desktop or mobile
+                        screens.<br>
+                        <strong><span>&#10003;</span> Multiple Formats:</strong> Choose between standard layout or with
+                        photo.<br>
+                        <strong><span>&#10003;</span> Quick Sharing:</strong> Hosted PDFs with direct links for easy
+                        sharing.<br>
+                        <strong><span>&#10003;</span> Clean Typography:</strong> Professional typesetting for optimal
+                        readability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-tutorial">
+        <div class="container">
+            <h2 class="section-title">Video Tutorial</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/U0_wgbm6c9w"
+                                title="Best Software Engineer CV Template: Make Your Resume Stand Out"
+                                allowfullscreen></iframe>
+                            <div class="video-duration">1:24</div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Best Software Engineer CV Template: Make Your Resume Stand Out</h3>
+                            <div class="video-meta">
+                                <span>Srinivas Rao Tammireddy</span>
+                                <span>256 views</span>
+                                <span>3 months ago</span>
+                            </div>
+                            <p>Watch this tutorial to learn how to create your professional software engineer resume
+                                using this LaTeX template. The perfect template for technical roles and software
+                                engineering positions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hosted">
+        <div class="container">
+            <h2 class="section-title">Hosted Resumes</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Quick Access</h3>
+                    <p>Share direct links to your PDF instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="how-to-use">
+        <div class="container">
+            <h2 class="section-title">How to Use the Templates</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Simple Steps</h3>
+                    <ol class="steps">
+                        <li>Clone this repository:
+                            <div class="code-block language-bash">git clone
+                                https://github.com/srinu2003/LaTex-Resume.git</div>
                         </li>
-                        <li>Resume Template (With Photo):
-                            <ul>
-                                <li><a href="Resume-Template-Photo.tex">TeX Source</a>: A LaTeX resume template with
-                                    support for including a profile photo.</li>
-                                <li><a href="https://srinu2003.github.io/LaTex-Resume/Resume-Template-Photo.pdf"
-                                        target="_blank">PDF Preview</a></li>
-                            </ul>
+                        <li>Navigate to the project directory:
+                            <div class="code-block language-bash">cd LaTex-Resume</div>
                         </li>
-                    </ul>
-                </li>
-                <li><strong>Hosted Resumes for Recruiters:</strong> Quick access to hosted resumes.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>How to Use the Templates</h2>
-            <ol>
-                <li>Clone this repository:
-                    <pre><code>git clone https://github.com/srinu2003/LaTex-Resume.git</code></pre>
-                </li>
-                <li>Navigate to the project directory:
-                    <pre><code>cd LaTex-Resume</code></pre>
-                </li>
-                <li>Open the desired template file in your LaTeX editor.</li>
-                <li>Customize the content to fit your needs.</li>
-                <li>Compile the LaTeX file to generate your PDF resume.</li>
-            </ol>
-        </section>
-        <section>
-            <h2>License</h2>
-            <p>This repository is licensed under the MIT License. See the <a href="LICENSE" target="_blank">LICENSE</a>
-                file for details.</p>
-        </section>
-        <section>
-            <h2>Acknowledgments</h2>
-            <p>This project is based on:</p>
-            <ul>
-                <li><a href="https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn"
-                        target="_blank">Jake's Resume Template</a> by Jake Gutierrez</li>
-                <li><a href="https://github.com/sb2nov/resume" target="_blank">sb2nov's Resume Template</a></li>
-            </ul>
-            <p>Modified and enhanced by <a href="https://github.com/srinu2003" target="_blank">@srinu2003</a>.</p>
-        </section>
-        <section>
-            <h2>Author</h2>
-            <p><strong>Srinivas Rao Tammireddy</strong></p>
-            <p>GitHub: <a href="https://github.com/srinu2003" target="_blank">srinu2003</a></p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/srinu2003" target="_blank">linkedin.com/in/srinu2003</a></p>
-        </section>
-    </main>
+                        <li>Open the desired template file in your favorite LaTeX editor</li>
+                        <li>Customize the content to fit your needs</li>
+                        <li>Compile the LaTeX file to generate your PDF resume</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="acknowledgments">
+        <div class="container">
+            <h2 class="section-title">Acknowledgments</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Based on these great works:</h3>
+                    <p>- <a href="https://www.overleaf.com/latex/templates/jakes-resume-anonymous/cstpnrbkhndn"
+                            target="_blank">Jake's Resume Template</a> by Jake Gutierrez</p>
+                    <p>- <a href="https://github.com/sb2nov/resume" target="_blank">sb2nov's Resume Template</a></p>
+                    <p>These templates have been modified and enhanced by <a href="https://github.com/srinu2003"
+                            target="_blank">@srinu2003</a> to create unique and professional resume formats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="license">
+        <div class="container">
+            <h2 class="section-title">License</h2>
+            <div class="card">
+                <p>This repository is licensed under the MIT License. See the <a
+                        href="https://github.com/srinu2003/LaTex-Resume/blob/main/LICENSE" target="_blank">LICENSE"
+                        file for details.</p>
+            </div>
+        </div>
+    </section>
     <footer>
-        <p>&copy; 2023 Srinivas Rao Tammireddy. All Rights Reserved.</p>
+        <div style="color: lightblue; text-decoration: underline;">&copy; 2023 Srinivas Rao Tammireddy. All Rights
+            Reserved.</div>
+        <div class="social-links">
+            <a href="https://github.com/srinu2003" target="_blank">
+                <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png" alt="GitHub"
+                    class="social-icon">GitHub
+            </a> |
+            <a href="https://linkedin.com/in/srinu2003" target="_blank">
+                <img src="https://img.icons8.com/color/24/ffffff/linkedin.png" alt="LinkedIn"
+                    class="social-icon">LinkedIn
+            </a>
+        </div>
+        <div style="margin-top: 0.5rem; font-size: 0.8rem;">
+            This project is a work in progress. Contributions and suggestions are welcome!
+        </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-core.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
+    <script defer>
+        // Theme toggle logic (optimized)
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        const themeStyle = document.getElementById('theme-style');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const LIGHT = 'styles-light.css';
+        const DARK = 'styles-dark.css';
+
+        function setTheme(theme) {
+            themeStyle.setAttribute('href', theme);
+            localStorage.setItem('theme', theme);
+            if (theme === DARK) {
+                document.body.classList.add('dark-theme');
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = '';
+            } else {
+                document.body.classList.remove('dark-theme');
+                sunIcon.style.display = '';
+                moonIcon.style.display = 'none';
+            }
+        }
+
+        (() => {
+            let theme = localStorage.getItem('theme');
+            if (!theme) {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? DARK : LIGHT;
+            }
+            setTheme(theme);
+        })();
+
+        themeBtn.addEventListener('click', () => {
+            const current = themeStyle.getAttribute('href');
+            setTheme(current === LIGHT ? DARK : LIGHT);
+        });
+    </script>
 </body>
 
 </html>
